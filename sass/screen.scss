@@ -1,0 +1,335 @@
+$colorw:black;
+$color-yellow:#ffca26;
+$color-b:black;
+$color-grey:#999;
+$bec-col-yel:#ffca26;
+$color-white:white;
+$head-size:1.5rem;
+$p-size:1.3rem;
+$background-size:cover;
+$center:center;
+$font-colof:#f3f3f3;
+@mixin border-b-yellow ($solid){
+	border-bottom: 4px solid $solid;
+	padding-bottom: 10px; 
+}
+@mixin h1-zagolovoc($text-align,$padding, $color,$weight){
+	text-align: $text-align;
+ 	font-size: $head-size;
+ 	text-transform: uppercase;
+ 	color:$color;
+	font-weight: $weight;
+	padding:$padding;
+}
+@mixin p-zagolovoc($color,$size,$align,$padding){
+	color: $color;
+	font-size: $size;
+	text-align: $align;
+	padding:$padding;
+}
+@mixin babl($width,$height,$border-radius,$color,$float){
+	width: $width;
+   	height: $height;
+   	background-color: $color;
+	border-radius: $border-radius;
+	text-align: center;
+  	background-repeat: no-repeat;
+  	background-position:center;
+  	float:$float;
+  	display: inline-flex !important;
+    justify-content: center;
+    align-items: center;
+}
+@mixin float-p($float,$text-align){
+  	float:$float;
+	text-align:$text-align;
+	font-size: 1rem;
+	color: #999;
+  				}
+@import "compass/reset";
+a{
+	color:$colorw;
+}
+nav {
+	 a {   		
+	 	float: right;
+		color: #333;
+		text-transform: uppercase;
+		font-size: 1rem;
+		font-weight: 600;
+		padding: 15px;
+
+		&:hover {
+				@include border-b-yellow ($color-yellow);
+				}
+		}
+}
+.row {
+	padding-bottom:50px;
+	padding-top:20px;
+}
+.main {
+	background:url(../img/3-layers.jpg);
+	background-size:$background-size;
+	.res{
+		padding-bottom:220px;
+	}
+	h1{
+		@include  h1-zagolovoc(center,290px 0px 10px 0px,$color-yellow,600)
+	}
+	p {
+		text-align:$center;
+		color:$color-white;
+		font-size: $p-size; 
+	}
+	span{
+		text-align: $center;
+		display: block;
+		text-transform: uppercase;
+		color: $color-white;
+		font-size: 1.1rem;
+		@include border-b-yellow ($color-yellow);
+		width: 160px;
+		margin: auto;
+		padding-top: 160px;
+		padding-bottom:10px;
+	}
+}
+.block{
+	background-color:$bec-col-yel;
+	.logo{
+		margin: auto;
+		display: block;
+		padding: 100px 100px;
+	}
+	p{
+		width: 55%;
+		margin:auto;
+		text-align: center;
+		color: $color-white;
+		font-size: 1.2rem;
+		padding-bottom:150px;
+	}
+}
+.info{
+	h1,h2{
+		@include  h1-zagolovoc(center,250px 0px 20px,$color-b,100)
+
+	}
+	span{
+			color:$color-yellow;
+			font-weight:400;
+		}
+		p{
+			@include p-zagolovoc($color-grey,$p-size,$center,0px 0px 80px 0px)
+		}
+		.img_border{
+			border-top: 1px solid rgb(204, 204, 204);
+			margin-bottom: -28px;
+		}
+		.imeg_border{
+			margin: auto;
+			display: block;
+			padding-bottom:100px;
+		}
+		.border-icon1{
+  			@include babl(129px,122px,10px 60px 60px 60px,$color-yellow,right)
+		}
+		.border-icon1,.border-icon2, i  {
+			    font-size: 70px;
+    			color: white;
+    			display: block;
+		}
+		.border-icon2{
+  			@include babl(129px,122px,10px 60px 60px 60px,$color-yellow,left)
+		}
+		.border-icon3{
+  			@include babl(129px,122px,10px 60px 60px 60px,$color-yellow,right)
+		}
+		.border-icon4{
+  			@include babl(129px,122px,10px 60px 60px 60px,$color-yellow,left)
+		}
+		.border-icon5{
+  			@include babl(129px,122px,10px 60px 60px 60px,$color-yellow,right)
+		}
+		.border-icon6{
+  			@include babl(129px,122px,10px 60px 60px 60px,$color-yellow,left)
+		}
+		h3{		
+				font-weight: 600;
+				color: #999;
+  				font-size: 1.3rem;
+  				color: $color-grey;
+  				float:right;
+  				padding:10px 0px 10px 0px;
+  			}
+  		li{
+  			p{
+  				@include float-p(right,right)
+  			}
+  			p.p-left{
+  				@include float-p(left,left)
+  			}
+
+  		}
+  		h3.h3-left{
+  			float:left;
+  			text-align: left;
+  		}
+  		ul{
+  			overflow: hidden;
+  		}
+}
+.Profile{
+	background-color:$font-colof;
+	.icon1{
+		@include babl(80px,80px,0px 0px 0px 0px,$color-yellow,left)
+		
+	}
+	.icon1{
+		margin-top: -83px;
+		position: absolute;
+		margin-left: 15px;
+		display: inline-flex;
+    	justify-content: center;
+    	align-items: center;
+	}
+	.icon2{
+		@include babl(80px,80px,0px 0px 0px 0px,$color-yellow,left)	
+	
+	}
+	.icon2{
+		margin-top: -83px;
+		position: absolute;
+		margin-left: 117px;
+	}
+	.icon3{
+		@include babl(80px,80px,0px 0px 0px 0px,$color-yellow,left)
+		
+	}
+	.icon3{
+		margin-top: -83px;
+		position: absolute;
+		margin-left: 210px;
+	}
+	.icon1,.icon2,.icon3 {
+    	color: white;
+    	font-size: 50px;
+    	:hover{
+    		color: black;
+    	}
+	}
+	h1 {
+		@include h1-zagolovoc(left,70px 0px 60px 0px,black,1.4rem)
+
+		} 
+	h1{
+		float:left;
+		width: 100%;
+	}
+	p {
+		@include p-zagolovoc($color-grey,1rem,left,0px 0px 80px)
+	}	
+	.grey-bar {
+		height: 10px;
+		width: 100%;
+		background-color:#999;
+	}
+	h3{
+		padding:15px 0px 15px 0px;
+		color: $color-grey;
+	}
+	.y-bar1{
+		height: 10px;
+		width: 100%;
+		background-color:$bec-col-yel;
+	}
+	.y-bar2{
+		height: 10px;
+		width: 90%;
+		background-color:$bec-col-yel;
+	}
+	.y-bar3{
+		height: 10px;
+		width: 75%;
+		background-color:$bec-col-yel;
+	}
+	.y-bar4{
+		height: 10px;
+		width: 55%;
+		background-color:$bec-col-yel;
+	}
+	.y-bar5{
+		height: 10px;
+		width: 55%;
+		background-color:$bec-col-yel;
+	}
+	.devel{
+		float:left !important;
+	}
+	h2{
+		@include h1-zagolovoc(center,80px 0px 47px 0px,black,1.1rem)
+	}
+	h2{
+		front-size: 1.1rem;
+		span{
+			font-size: 2rem;
+			font-weight: 700;
+		}
+	}
+	ul{
+		overflow: hidden;
+		width: 100%;
+	}
+	li{
+		float:left;
+		text-align: center;
+		border:1px solid black;
+		padding-bottom:50px;
+		div{
+			font-size: 1.3rem;
+			padding: 30px 0px 10px 0px;
+			font-weight:700;
+		}
+		span{
+			color:$color-grey;
+		}
+		i{
+			padding-top:30px;
+			font-size: 5rem;
+    		font-weight: 400;
+    		color: #fc3;
+		}
+	}
+}
+.team{
+		h1,h2{
+		@include  h1-zagolovoc(center,250px 0px 20px,$color-b,100)
+
+	}
+
+		p{
+			@include p-zagolovoc($color-grey,$p-size,$center,0px 0px 80px 0px)
+		}
+		
+		.img_border{
+			border-top: 1px solid rgb(204, 204, 204);
+			margin-bottom: -28px;
+		}
+		.imeg_border{
+			margin: auto;
+			display: block;
+			padding-bottom:100px;
+		}
+		li{
+			span{
+			color:$color-grey;
+			display: block;
+			text-align: center;
+			padding-top:20px;
+		}
+			div{
+				@include h1-zagolovoc(center,70px 0px 0px 0px,black,1.4rem)
+			}
+		}
+}
